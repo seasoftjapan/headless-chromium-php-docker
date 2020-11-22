@@ -1,5 +1,5 @@
 # How it Works
-Forked from mfieldhouse/docker-php-helloworld
+Forked from https://github.com/mfieldhouse/docker-php-helloworld
 
 # Setup
 

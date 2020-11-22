@@ -6,13 +6,14 @@ use HeadlessChromium\BrowserFactory;
 $browserFactory = new BrowserFactory("/usr/bin/google-chrome");
 
 $browser = $browserFactory->createBrowser([
-	'headless'					=> false,
-	'sendSyncDefaultTimeout'	=> 40000
+	'headless' => true
 ]);
 
 $page = $browser->createPage();
 
-$page->navigate("https://it.wikipedia.org/wiki/Tom_Hardy")->waitForNavigation();
+$page->navigate("https://en.wikipedia.org/wiki/HelloWorld")->waitForNavigation();
 
-echo $page->evaluate('document.title')->getReturnValue();
+$title = $page->evaluate('document.title')->getReturnValue();
+
+echo $title;
 ?>

@@ -6,7 +6,7 @@ use HeadlessChromium\BrowserFactory;
 $browserFactory = new BrowserFactory("/usr/bin/google-chrome");
 
 $browser = $browserFactory->createBrowser([
-	'sendSyncDefaultTimeout'	=> 30000
+	'sendSyncDefaultTimeout' => 30000
 ]);
 
 $page = $browser->createPage();

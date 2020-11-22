@@ -3,12 +3,10 @@ require_once "vendor/autoload.php";
 
 use HeadlessChromium\BrowserFactory;
 
-echo "init";
-
 $browserFactory = new BrowserFactory("/usr/bin/google-chrome");
 
 $browser = $browserFactory->createBrowser([
-	'headless'					=> true,
+	'headless'					=> false,
 	'sendSyncDefaultTimeout'	=> 40000
 ]);
 

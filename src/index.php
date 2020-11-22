@@ -1,7 +1,20 @@
 <?php
+require_once "vendor/autoload.php";
 
-echo "Hello, World from Docker! <br>";
-echo "Hello ECS! <br>";
-echo '<img src="https://www.docker.com/sites/default/files/horizontal.png">';
+use HeadlessChromium\BrowserFactory;
 
+echo "init";
+
+$browserFactory = new BrowserFactory("/usr/bin/google-chrome");
+
+$browser = $browserFactory->createBrowser([
+	'headless'					=> true,
+	'sendSyncDefaultTimeout'	=> 40000
+]);
+
+$page = $browser->createPage();
+
+$page->navigate("https://it.wikipedia.org/wiki/Tom_Hardy")->waitForNavigation();
+
+echo $page->evaluate('document.title')->getReturnValue();
 ?>

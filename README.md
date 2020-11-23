@@ -3,6 +3,7 @@
 This example lets you start playing with chrome/chromium in headless mode from PHP with Docker.
 
 Forked from https://github.com/mfieldhouse/docker-php-helloworld
+
 Used Chrome PHP library (installed with Composer) https://github.com/chrome-php/headless-chromium-php
 
 # Setup

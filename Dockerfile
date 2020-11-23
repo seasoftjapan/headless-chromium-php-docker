@@ -17,6 +17,9 @@ RUN apt-get install -y fonts-liberation libasound2 libnspr4 libnss3 xdg-utils li
 # Install Chrome (TODO: Replace dpkg with gdebi)
 RUN dpkg -i google-chrome-stable_current_amd64.deb
 
+# Remove Chrome package
+RUN rm google-chrome-stable_current_amd64.deb
+
 # Install Composer dependencies
 RUN apt-get install -y git
 
